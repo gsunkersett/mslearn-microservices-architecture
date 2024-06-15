@@ -1,4 +1,6 @@
-﻿namespace DroneDelivery.Common.Services
+﻿using System.Threading.Tasks;
+
+namespace DroneDelivery.Common.Services
 {
     public class Utility
     {
@@ -14,7 +16,7 @@
                     {
                         for (int l = 0; l < permutations; l++)
                         {
-
+                            Task.Delay(100).Wait();
                         }
                         count++;
                     }

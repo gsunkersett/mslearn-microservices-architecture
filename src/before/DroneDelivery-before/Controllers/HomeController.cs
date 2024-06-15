@@ -51,7 +51,7 @@ namespace DroneDelivery_before.Controllers
             stopWatch.Start();
 
             var httpClient = httpClientFactory.CreateClient();
-            var urlBuilder = new UriBuilder(this.Request.Scheme, this.Request.Host.Host);
+            var urlBuilder = new UriBuilder(this.Request.Scheme, this.Request.Host.Host, (int)this.Request.Host.Port);
             httpClient.BaseAddress = urlBuilder.Uri;
 
             var tasks = new Task[RequestCount];
@@ -63,6 +63,7 @@ namespace DroneDelivery_before.Controllers
                 var httpContent = new StringContent(jsonString, System.Text.Encoding.UTF8, "application/json");
 
                 tasks[i] = httpClient.PostAsync("/api/DeliveryRequests", httpContent);
+                
             }
 
             Task.WaitAll(tasks);
