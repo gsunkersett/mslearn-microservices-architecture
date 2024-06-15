@@ -11,6 +11,7 @@ builder.Services.AddHttpClient()
                 .AddTransient<IRequestProcessor, RequestProcessor>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddControllers();
 
 var app = builder.Build();
 

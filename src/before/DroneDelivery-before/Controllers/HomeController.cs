@@ -27,13 +27,13 @@ namespace DroneDelivery_before.Controllers
                 PickupTime = DateTime.Now.AddDays(3),
                 Deadline = "deadline",
                 Expedited = true,
-                ConfirmationRequired = ConfirmationRequired.None,
+                ConfirmationRequired = ConfirmationRequired.Picture,
                 PackageInfo = new PackageInfo()
                 {
                     PackageId = "package1234567",
-                    Size = ContainerSize.Small,
-                    Weight = 0,
-                    Tag = "tag"
+                    //Size = ContainerSize.Large,
+                    Weight = 10,
+                    Tag = "product-tag"
                 }
             };
         }

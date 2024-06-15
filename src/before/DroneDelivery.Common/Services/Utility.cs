@@ -16,7 +16,7 @@ namespace DroneDelivery.Common.Services
                     {
                         for (int l = 0; l < permutations; l++)
                         {
-                            Task.Delay(100).Wait();
+                            //Task.Delay(100).Wait();
                         }
                         count++;
                     }

@@ -9,7 +9,7 @@ namespace DroneDelivery_before.Services
         public Task<PackageGen> CreatePackageAsync(PackageInfo packageInfo)
         {
             //Uses common data store e.g. SQL Azure tables
-            Utility.DoWork(100000);
+            Utility.DoWork(100);
             return Task.FromResult(new PackageGen { Id = packageInfo.PackageId });
         }
     }
